@@ -42,7 +42,6 @@ The 25 genres are: Action, Adventure, Animation, Biography, Comedy, Crime, Docum
 | `train.py` | `train_per_epoch()` for one epoch, `evaluate()` for accuracy and exact-match. |
 | `utils.py` | All settings (batch size, epochs, learning rate) and all file paths. |
 | `main.py` | The entry point. Builds the loaders, trains, evaluates on test, saves `model.pth`. |
-| `eval.py` | Loads `model.pth` and prints the full report: per-genre precision/recall/F1/AP, macro and micro scores, Hamming loss, and a threshold sweep. |
 | `requirments.txt` | Python packages needed. |
 
 `main.py` is run only at the very end, when everything else is already in place.
@@ -96,13 +95,6 @@ python main.py
 
 This trains for 10 epochs, evaluates on the test set, and saves the weights to `model.pth`.
 
-**Step 3 - check the model properly:**
-
-```
-python eval.py
-```
-
-This loads `model.pth` and prints the detailed report shown below. It does not train anything.
 
 ## Results
 
